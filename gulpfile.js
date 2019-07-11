@@ -200,7 +200,11 @@ var buildStyles = function (done) {
 			sourceComments: true
 		}))
 		.pipe(prefix({
-			browsers: ['last 2 version', '> 0.25%'],
+			overrideBrowserslist: [
+				"> 1%",
+				"last 2 versions",
+				"IE 11"
+			],
 			cascade: true,
 			remove: true
 		}))
